@@ -30,15 +30,15 @@ window.addEventListener("scroll", () => {
     console.log("entre");
     if (original > window.scrollY) {
       if (left > 0) {
-        left -= 0.2;
+        left -= 0.3;
       }
     } else {
-      if (left < 50) {
-        left += 0.2;
+      if (left < 80) {
+        left += 0.3;
       }
     }
 
-    separador.style.width = left + 10 + "%";
+    separador.style.width = left + 10 + "rem";
   }
   original = window.scrollY;
 });

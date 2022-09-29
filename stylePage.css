@@ -21,12 +21,14 @@ nav {
 nav.sticky {
   background-color: #162d54;
 }
-nav .logo {
-  height: 60%;
+nav a .logo {
+  margin-left: 5rem;
+  height: 3.5rem;
 }
 nav ul {
   display: flex;
   list-style: none;
+  margin-left: 10rem;
 }
 nav ul li {
   padding: 0 1rem;
@@ -112,20 +114,18 @@ nav ul li .hamburguer .line::before {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background: transparent;
 }
-.app::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgba(0, 0, 0, 0.7);
+.app video {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: -999;
 }
 .app section {
   display: flex;
   flex-direction: column;
-  color: transparent;
+  color: #000;
   transition: all 0.5 ease-in-out;
   justify-content: center;
   align-items: center;
@@ -140,24 +140,82 @@ nav ul li .hamburguer .line::before {
 .app section.first {
   gap: 2rem;
   color: white;
+  display: flex;
+  flex-direction: row;
 }
-.app section.first .text {
+.app section.first::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.815);
+  width: 50%;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+}
+.app section.first .info-container {
+  width: 50%;
+  padding: 0 2rem;
+}
+.app section.first .info-container .title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.app section.first .info-container .title h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+.app section.first .info-container p {
   width: 90%;
   position: relative;
   font-weight: bolder;
   font-size: 1.2rem;
+}
+.app section.first .search-container {
+  width: 50%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app section.first .search-container .search-box {
+  position: relative;
+  width: 70%;
+  height: 3rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.app section.first .search-container .search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0 1rem;
+}
+.app section.first .search-container .search-box button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 100%;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .app section.active {
   color: white;
 }
 .app section.active a {
   color: #5c65c0;
-}
-.app section .text {
-  width: 90%;
-  position: relative;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
 }
 .app section .titles {
   font-size: 1.5rem;
@@ -167,13 +225,8 @@ nav ul li .hamburguer .line::before {
 .app section .titles h1 {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1rem;
   position: relative;
   transition: all 0.5s ease;
-}
-.app section .titles h1:hover {
-  transition: all 0.5s ease;
-  transform: scale(110%);
 }
 .app section .titles h2 {
   font-size: 1.5rem;
@@ -181,18 +234,11 @@ nav ul li .hamburguer .line::before {
   margin-bottom: 1rem;
   position: relative;
 }
-.app section .wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50rem;
-}
-.app section .wrapper h1 {
-  font-size: 2rem;
-}
-.app section .wrapper p {
-  font-size: 1rem;
+.app section .text {
+  width: 90%;
+  position: relative;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 .app section::before {
   top: 0;
@@ -201,59 +247,68 @@ nav ul li .hamburguer .line::before {
   content: "";
   width: 100%;
   height: 100%;
-  filter: brightness(30%);
+  filter: brightness(100%);
   background-size: cover;
 }
-.app section:nth-child(2) {
+.app section#benefits {
   background-color: rgb(255, 255, 255);
   transition: all 0.5s ease;
+  color: #fff;
 }
-.app section:nth-child(2)::before {
+.app section#benefits::before {
+  background-image: url(https://images.pexels.com/photos/1468704/pexels-photo-1468704.jpeg?cs=srgb&dl=pexels-maro%C5%A1-markovi%C4%8D-1468704.jpg&fm=jpg);
+}
+.app section#content1 {
+  background-color: rgb(255, 255, 255);
+  transition: all 0.5s ease;
+  color: #fff;
+}
+.app section#content1::before {
   background-image: url(https://images.pexels.com/photos/2387532/pexels-photo-2387532.jpeg?cs=srgb&dl=pexels-adrien-olichon-2387532.jpg&fm=jpg);
+  filter: brightness(50%);
 }
-.app section:nth-child(3) {
-  position: relative;
+.app section#content2 {
   color: white;
-  gap: 5rem;
 }
-.app section:nth-child(3)::before {
+.app section#content2::before {
   top: 0;
   left: 0;
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
-  filter: brightness(40%);
   background-size: cover;
-  background-image: url(https://images.pexels.com/photos/1468704/pexels-photo-1468704.jpeg?cs=srgb&dl=pexels-maro%C5%A1-markovi%C4%8D-1468704.jpg&fm=jpg);
+  background-image: url("https://images.pexels.com/photos/1604141/pexels-photo-1604141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  filter: brightness(40%);
 }
-.app section:nth-child(3) #separador {
+.app section#content2 #separador {
   top: 17rem;
   background-color: #413b6b;
   content: "";
   position: absolute;
   height: 1rem;
 }
-.app section:nth-child(3) .titles {
+.app section#content2 .titles {
   width: 90%;
   height: 10rem;
 }
-.app section:nth-child(3) .text {
+.app section#content2 .text {
   word-spacing: 0.2rem;
 }
-.app section:nth-child(3) a {
+.app section#content2 a {
   color: #5c65c0;
 }
-.app section:nth-child(4) {
+.app section#content3 {
   transition: all 0.5s ease;
 }
-.app section:nth-child(4)::before {
+.app section#content3::before {
   background-image: url(https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background: rgba(0, 0, 0, 0.651);
 }
-.app section:nth-child(5) {
+.app section#content4 {
   transition: all 0.5s ease;
 }
-.app section:nth-child(5)::before {
+.app section#content4::before {
   filter: brightness(20%);
   background-image: url(https://images.pexels.com/photos/802024/pexels-photo-802024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
@@ -261,12 +316,12 @@ nav ul li .hamburguer .line::before {
 footer {
   background-color: #162d54;
   font-family: "Lato", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease-in;
-  height: 25rem;
+  height: 20rem;
   width: 100%;
   flex-direction: row;
   color: white;
@@ -275,16 +330,21 @@ footer {
 footer ul {
   color: white;
   list-style: none;
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   min-height: 20rem;
-  gap: 1rem;
+  gap: 2rem;
+  width: 50rem;
 }
 footer ul li {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  font-size: 0.9rem;
+  width: 25rem;
+  font-size: 0.6rem;
+  gap: 1rem;
 }
 footer ul li i {
   height: 2rem;
@@ -293,14 +353,34 @@ footer ul li i {
 footer ul li .info {
   display: flex;
   flex-direction: column;
+  overflow-wrap: break-word;
 }
 footer ul li .info h1 {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+  height: 2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-footer ul li .info h1:nth-child(2):hover {
+footer ul li .info h1.hover {
+  position: relative;
+  cursor: pointer;
+}
+footer ul li .info h1.hover::after {
+  transition: all 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  width: 0%;
+  height: 0.2rem;
+  background-color: white;
   border-bottom: 1px solid white;
+}
+footer ul li .info h1.hover:hover::after {
+  transition: all 0.5s ease-in-out;
+  width: 100%;
 }
 
 @-webkit-keyframes appear {

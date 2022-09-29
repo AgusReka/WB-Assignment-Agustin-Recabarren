@@ -23,11 +23,13 @@
   </head>
   <body class="body">
     <nav>
-      <img
-        src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/eksqbks3aelreidg6ndq/gatien-salaun_branding_beige-wordmark_rgb-2"
-        alt="logo-image"
-        class="logo"
-      />
+      <a href="#landing">
+        <img
+          src="https://res.cloudinary.com/luxuryp/images/w_960,c_limit,f_auto,q_auto/eksqbks3aelreidg6ndq/gatien-salaun_branding_beige-wordmark_rgb-2"
+          alt="logo-image"
+          class="logo"
+        />
+      </a>
       <ul>
         <li><a href="#benefits">BENEFITS</a></li>
         <li><a href="#content1">ADVERTISING</a></li>
@@ -36,8 +38,38 @@
         <li><a href="#content4">HOME SEARCH</a></li>
       </ul>
     </nav>
-    <div class="app">
-      <section class="content first" id="benefits">
+    <main class="app">
+      <video autoplay muted loop>
+        <source
+          src="https://res.cloudinary.com/dx23nbh5k/video/upload/v1664488337/video1_ok7hkw.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <section class="content first" id="landing">
+        <div class="info-container">
+          <div class="title">
+            <h1>Your journey to get comfort and luxury starts here.</h1>
+            <h2>Real Estate Agency</h2>
+          </div>
+          <p>
+            Search and find your dream home with our real estate agency. We have
+            a wide range of properties for sale and rent.
+          </p>
+        </div>
+        <div class="search-container">
+          <div class="search-box">
+            <input
+              type="text"
+              placeholder="Search for a property"
+              class="search-input"
+            />
+            <button class="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="content" id="benefits">
         <div class="titles">
           <h1>​​The Benefits of Working with a Luxury Presence Agent</h1>
           <h2>
@@ -109,6 +141,7 @@
           </p>
         </div>
       </section>
+
       <section class="content" id="content3">
         <div class="titles">
           <h1>Effective Search Engine Optimization</h1>
@@ -120,11 +153,12 @@
               href="https://www.nar.realtor/infographics/where-buyers-found-the-home-they-purchased"
               target="_blank"
               >44% of buyers found the home they purchased</a
-            >on the internet. Many of them simply googled the search terms that
-            they wanted in a new home and started their search that way. For
-            your home to show up in these types of searches, your real estate
-            agent needs to use the right terms in your online marketing. The
-            effective use of these terms is referred to as search engine
+            >
+            &nbsp; on the internet. Many of them simply googled the search terms
+            that they wanted in a new home and started their search that way.
+            For your home to show up in these types of searches, your real
+            estate agent needs to use the right terms in your online marketing.
+            The effective use of these terms is referred to as search engine
             optimization or SEO. The process of identifying and correctly using
             the right terms is a bit of a science—one that the SEO experts at
             Luxury Presence have mastered. When a potential buyer searches terms
@@ -155,41 +189,40 @@
           </p>
         </div>
       </section>
-
       <footer>
-          <ul>
-            <li>
-              <i class="fa-solid fa-envelope"></i>
-              <div class="info">
-                <h1>EMAIL</h1>
-                <h1>GATIEN.SALAUN@CBREALTY.COM</h1>
-              </div>
-            </li>
-            <li>
-              <i class="fa-solid fa-map"></i>
-              <div class="info">
-                <h1>ADDRESS</h1>
-                <h1>1682 JEFFERSON AVE., #103 MIAMI BEACH, FL 33139</h1>
-              </div>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <i class="fa-solid fa-phone"></i>
-              <div class="info">
-                <h1>PHONE NUMBER</h1>
-                <h1>(561) 414-3565</h1>
-              </div>
-            </li>
-            <li>
-              <i class="fa-solid fa-clock"></i>
-              <div class="info">
-                <h1>OPEN HOURS</h1>
-                <h1>MONDAY - SUNDAY, 9 AM - 7 PM</h1>
-              </div>
-            </li>
-          </ul>
+        <ul>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <div class="info">
+              <h1>EMAIL</h1>
+              <h1 class="hover">GATIEN.SALAUN@CBREALTY.COM</h1>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-map"></i>
+            <div class="info">
+              <h1>ADDRESS</h1>
+              <h1>1682 JEFFERSON AVE., #103 MIAMI BEACH, FL 33139</h1>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <div class="info">
+              <h1>PHONE NUMBER</h1>
+              <h1 class="hover">(561) 414-3565</h1>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-clock"></i>
+            <div class="info">
+              <h1>OPEN HOURS</h1>
+              <h1>MONDAY - SUNDAY, 9 AM - 7 PM</h1>
+            </div>
+          </li>
+        </ul>
       </footer>
-    </div>
+    </main>
   </body>
 </html>
