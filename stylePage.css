@@ -122,24 +122,6 @@ nav ul li .hamburguer .line::before {
   left: 0px;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.app h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  position: relative;
-}
-.app h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  position: relative;
-}
-.app .text {
-  width: 90%;
-  position: relative;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
 .app section {
   display: flex;
   flex-direction: column;
@@ -172,19 +154,32 @@ nav ul li .hamburguer .line::before {
   color: #5c65c0;
 }
 .app section .text {
-  width: 70%;
+  width: 90%;
   position: relative;
-  font-weight: bolder;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 .app section .titles {
   font-size: 1.5rem;
   position: relative;
   transition: all 0.5s ease;
 }
+.app section .titles h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  transition: all 0.5s ease;
+}
 .app section .titles h1:hover {
   transition: all 0.5s ease;
   transform: scale(110%);
+}
+.app section .titles h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
 }
 .app section .wrapper {
   display: flex;
@@ -261,6 +256,51 @@ nav ul li .hamburguer .line::before {
 .app section:nth-child(5)::before {
   filter: brightness(20%);
   background-image: url(https://images.pexels.com/photos/802024/pexels-photo-802024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+footer {
+  background-color: #162d54;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in;
+  height: 25rem;
+  width: 100%;
+  flex-direction: row;
+  color: white;
+  filter: brightness(1);
+}
+footer ul {
+  color: white;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 20rem;
+  gap: 1rem;
+}
+footer ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 0.9rem;
+}
+footer ul li i {
+  height: 2rem;
+  font-size: 1.5rem;
+}
+footer ul li .info {
+  display: flex;
+  flex-direction: column;
+}
+footer ul li .info h1 {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+footer ul li .info h1:nth-child(2):hover {
+  border-bottom: 1px solid white;
 }
 
 @-webkit-keyframes appear {

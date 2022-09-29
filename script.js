@@ -11,9 +11,16 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
     nav.style.top = original > window.scrollY ? "0" : "-6rem";
   }
-
-  child2.classList.toggle("active", window.scrollY > child2.offsetTop / 1.5);
-  child3.classList.toggle("active", window.scrollY > child3.offsetTop / 1.1);
+  if (window.scrollY > child2.offsetTop / 1.5 && window.scrollY < child2.offsetTop * 1.5 ) {
+    child2.classList.add("active")
+  } else{
+    child2.classList.remove("active")
+  }
+  if (window.scrollY > child3.offsetTop / 1.5 && window.scrollY < child3.offsetTop * 1.1 ) {
+    child3.classList.add("active")
+  } else{
+    child3.classList.remove("active")
+  }
   child4.classList.toggle("active", window.scrollY > child4.offsetTop / 1.1);
   console.log(window.scrollY + " -- " + separador.parentElement.offsetTop);
   if (
